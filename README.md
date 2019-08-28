@@ -1,2 +1,2 @@
-# GreetingApp
-User will be welcomed with a greeting card 
+# WeatherApp
+User can get the weather details .
