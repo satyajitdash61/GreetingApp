@@ -1,0 +1,98 @@
+<html lang="en" dir="ltr">
+     <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style1.css">
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+         <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+         <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative&display=swap" rel="stylesheet">
+     </head>
+     <body>
+         <div class="outer" id="outer">
+             <div class="inner" >
+                 <img src="https://cdn2.iconfinder.com/data/icons/circle-icons-1/64/profle-128.png" id="profile-pic">
+                 <h2>Holiday point</h2>
+                 <div class="usr_name">
+                   <input type="text" name="text" id="text">
+                   <span data-placeholder="Username :"></span>
+                 </div>
+                
+                 <div>
+                     <button class="button" onclick="show()" id="btn">Click </button>
+                     
+                 </div> 
+                </div>
+                </div>
+            <script type="text/javascript">
+            $(".usr_name input").on("focus",function(){
+              $(this).addClass("focus");
+            });
+      
+            $(".usr_name input").on("blur",function(){
+              if($(this).val() == "")
+              $(this).removeClass("focus");
+            });
+      
+            </script>
+            <script type="text/javascript">
+            function show(){
+            // array
+            var name=document.getElementById("text").value;
+            var body = document.querySelector('body');
+            var daylist = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+            var currentdate = new Date();
+            //document.write(currentdate.getDate());
+            if(currentdate.getDay()==0 || currentdate.getDay()==6){
+            if(currentdate.getHours()>=4 && currentdate.getHours()<=11){  
+            body.innerHTML = "<div class='box'> <h1>Good Morning "+ name +" !</h1> <p><span class='date'>Date : "+ currentdate.getDate() + "/"
+                + (currentdate.getMonth()+1)  + "/" 
+                + currentdate.getFullYear() +"</span></p></br><p><span class='day'> Day : "+daylist[currentdate.getDay()]+ "</span></p></br><p><span class='time'>Time : "  
+                + currentdate.getHours() + ":"  
+                + currentdate.getMinutes() + "</span></p></br><p><span class='msg'>Enjoy Your Weekend !</span></p></div>";
+            }
+            else if(currentdate.getHours()>=12 && currentdate.getHours()<=16){
+              body.innerHTML = "<div class='box'> <h1>Good Afternoon "+ name +" !</h1> <p><span class='date'>Date : "+ currentdate.getDate() + "/"
+                + (currentdate.getMonth()+1)  + "/" 
+                + currentdate.getFullYear() +"</span></p></br><p><span class='day'> Day : "+daylist[currentdate.getDay()]+ "</span></p></br><p><span class='time'>Time : "  
+                + currentdate.getHours() + ":"  
+                + currentdate.getMinutes() + "</span></p></br><p><span class='msg'>Enjoy Your Weekend !</span></p></div>";
+            }
+            else{
+              body.innerHTML = "<div class='box'> <h1>Good Evening "+ name +" !</h1> <p><span class='date'>Date : "+ currentdate.getDate() + "/"
+                + (currentdate.getMonth()+1)  + "/" 
+                + currentdate.getFullYear() +"</span></p></br><p><span class='day'> Day : "+daylist[currentdate.getDay()]+ "</span></p></br><p><span class='time'>Time : "  
+                + currentdate.getHours() + ":"  
+                + currentdate.getMinutes() + "</span></p></br><p><span class='msg'>Enjoy Your Weekend !</span></p></div>";
+            }
+            }
+            else{
+              if(currentdate.getHours()>=4 && currentdate.getHours()<=11){
+            body.innerHTML = "<div class='box'> <h1>Good Morning "+ name +" !</h1> <p><span class='date'>Date : "+ currentdate.getDate() + "/"
+                + (currentdate.getMonth()+1)  + "/" 
+                + currentdate.getFullYear() +"</span></p></br><p><span class='day'> Day : "+daylist[currentdate.getDay()]+ "</span></p></br><p><span class='time'>Time : "  
+                + currentdate.getHours() + ":"  
+                + currentdate.getMinutes() + "</span></p></br><p><span class='msg'>Days left for weekend : "+(6-(currentdate.getDay()))+"</span></p></div>";
+            }
+            else if(currentdate.getHours()>=12 && currentdate.getHours()<=16){
+              body.innerHTML = "<div class='box'> <h1>Good Afternoon "+ name +" !</h1> <p><span class='date'>Date : "+ currentdate.getDate() + "/"
+                + (currentdate.getMonth()+1)  + "/" 
+                + currentdate.getFullYear() +"</span></p></br><p><span class='day'> Day : "+daylist[currentdate.getDay()]+ "</span></p></br><p><span class='time'>Time : "  
+                + currentdate.getHours() + ":"  
+                + currentdate.getMinutes() + "</span></p></br><p><span class='msg'>Days left for weekend : "+(6-(currentdate.getDay()))+"</span></p></div>";
+            }
+             else{
+              body.innerHTML = "<div class='box'> <h1>Good Evening "+ name +" !</h1> <p><span class='date'>Date : "+ currentdate.getDate() + "/"
+                + (currentdate.getMonth()+1)  + "/" 
+                + currentdate.getFullYear() +"</span></p></br><p><span class='day'> Day : "+daylist[currentdate.getDay()]+ "</span></p></br><p><span class='time'>Time : "  
+                + currentdate.getHours() + ":"  
+                + currentdate.getMinutes() + "</span></p></br><p><span class='msg'>Days left for weekend : "+(6-(currentdate.getDay()))+"</span></p></div>";
+            }
+            }
+
+            }
+            </script>
+     </body>
+</html>
+<!-- <div>
+        <input type="text" name="usr_name" class="usr_name" placeholder="UserName" >
+      </div><br>
+      Enjoy Your Weekend !  -->
