@@ -1,5 +1,5 @@
 # GreetingApp
-User can get enter his name and can see a greeting card of his name .
+User can enter his/her name and can see a greeting card of the same name .
 
 # Technology Used
 Html,Css,Javascript
