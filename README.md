@@ -8,4 +8,4 @@ Html,Css,Javascript
 Satyajit Dash
 
 # Preview
-https://peaceful-hodgkin-5d8efd.netlify.com/
+https://relaxed-yalow-6ea20f.netlify.com/
